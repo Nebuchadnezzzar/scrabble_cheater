@@ -17,17 +17,27 @@ Scrabble cheater is a command-line program that enables you to find all possible
 * for **judg\*** it would find: 'judges', 'judgement', 'judgemental', 'judgements', 'judgy'
 * for **ep.ste\*ic** it would find only 'epistemic'
 
-The number of **'.'**s and **'\*'**s in a pattern is unlimited.
+The number of '.'s and '\*'s in a pattern is unlimited.
 
-The program returns a .json file consisting of a Python dictionary with patterns as keys and pattern-matching words as its values.
+### Input:
+
+* dictionary file - a txt file being a subset of https://sjp.pl/slownik/odmiany/
+* patterns file - a txt file consisting of patterns for our search
+
+### Output:
+
+* .json file consisting of a Python dictionary with patterns as keys and pattern-matching words as its values.
+* .json file consisting of a Python dictionary with patterns as keys and patterns' anagrams as its values (optional).
+
+
 
 # Technology
 Python (3.5 or newer) and Bash (or a different Unix shell) are required to run this program.
 
 # Setup
-In the directory where the program file is located save also dictionary (*dictionary* argument) and patterns files (*patterns* argument).
+In the program directory save also dictionary and patterns files.
 
-Go to the program directory and type:
+In your command line type:
 
 $ python3 cheater_final.py [-h] [-o] [-a] dictionary patterns
 
